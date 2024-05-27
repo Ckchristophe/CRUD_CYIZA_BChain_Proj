@@ -1,0 +1,33 @@
+{
+  "canisters": {
+    "P1_backend": {
+      "main": "src/P1_backend/main.mo",
+      "type": "motoko"
+    },
+    "P1_frontend": {
+      "dependencies": [
+        "P1_backend"
+      ],
+      "source": [
+        "src/P1_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "P1_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "localhost:46157",
+      "type": "ephemeral"
+    }
+  },
+  
+  "output_env_file": ".env",
+  "version": 1
+}
